@@ -1,5 +1,4 @@
-public class Day1_Hello
-{
+public class Hello{
 
 	public static void main(String[] args)
 	{
