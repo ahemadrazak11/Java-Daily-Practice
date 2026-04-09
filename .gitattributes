@@ -2,3 +2,7 @@
 * text=auto
 *.class
 .metadata/
+/bin/
+.settings/
+.classpath
+.project
