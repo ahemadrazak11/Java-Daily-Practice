@@ -1,3 +1,5 @@
+package com.java.practice.day15;
+
 abstract class A
 {
     int a;

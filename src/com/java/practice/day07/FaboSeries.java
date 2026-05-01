@@ -1,4 +1,5 @@
-package com.java.practice.day7;
+package com.java.practice.day07;
+
 import java.util.Scanner;
 
 public class FaboSeries {

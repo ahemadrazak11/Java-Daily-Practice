@@ -1,4 +1,4 @@
-package com.java.practice.day2;
+package com.java.practice.day02;
 import java.util.Scanner;
 
 public class IsAmstrong {

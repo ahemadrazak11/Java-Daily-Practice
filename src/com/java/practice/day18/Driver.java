@@ -43,8 +43,9 @@ package com.java.practice.day18;
 	 private int cardNumber;
 	 private String holderName;
 	 	
-	 CreditCardPayment(int cardNumber)
+	 CreditCardPayment(String holderName, int cardNumber)
 	 {
+		 this.holderName = holderName;
 		 this.cardNumber = cardNumber;
 	 }
 
@@ -52,25 +53,8 @@ package com.java.practice.day18;
  	@Override
  	public void Pay(double ammount)
  	{		
- 		System.out.println("Paid " + ammount + " " + "Using Credit Card:" + " "+ cardNumber);
+ 		System.out.println("To "+ holderName + " Paid " + ammount + " Using Credit Card: " + cardNumber);
  	}
-
-	public int getCardNumber() {
-		return cardNumber;
-	}
-
-	public void setCardNumber(int cardNumber) {
-		this.cardNumber = cardNumber;
-	}
-
-	public String getHolderName() {
-		return holderName;
-	}
-
-	public void setHolderName(String holderName) {
-		this.holderName = holderName;
-	}
- 	
  	
  	
  }
@@ -119,7 +103,7 @@ public class Driver {
 	
 	public static void main(String[] args)
 	{
-		CreditCardPayment ccP = new CreditCardPayment(101011);
+		CreditCardPayment ccP = new CreditCardPayment("Ahemad Raza", 101011);
 		UpiPayment upiP = new UpiPayment("@raza123");
 		
 		User u1 = new User();		

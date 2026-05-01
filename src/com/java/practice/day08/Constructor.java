@@ -1,4 +1,4 @@
-package com.java.practice.day8;
+package com.java.practice.day08;
 
 class Account
 {

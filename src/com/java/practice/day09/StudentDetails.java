@@ -1,6 +1,6 @@
-package com.java.practice.day9;
+package com.java.practice.day09;
 
-public class StudentDetails {
+public class StudentDetails{
 
 	int id;
 	String name;

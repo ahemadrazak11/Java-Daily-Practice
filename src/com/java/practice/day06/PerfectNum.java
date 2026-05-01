@@ -1,4 +1,4 @@
-package com.java.practice.day6;
+package com.java.practice.day06;
 
 import java.util.Scanner;
 
