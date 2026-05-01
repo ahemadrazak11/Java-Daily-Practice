@@ -29,7 +29,7 @@ class Dog implements Animal{
 	@Override
 	public void Speed()
 	{
-		System.out.println("Dog Speed...");
+		System.out.println("Dog Speed...!");
 	}
 }
 
