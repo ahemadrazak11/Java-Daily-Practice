@@ -12,7 +12,21 @@ public class EqualsMethod {
 	
 	public boolean equals(Object O)
 	{
-		if((this.id == O.id) && )
+		EqualsMethod e = (EqualsMethod) O;
+		if((this.id == e.id) && this.name.equals(e.name))
+		{
+			return true;
+		}
+		
+		return false;
 	}
 	
+	public static void main(String[] args)
+	{
+		EqualsMethod eq1 = new EqualsMethod(101, "Ahemad");
+		
+		EqualsMethod eq2 = new EqualsMethod(101, "Ahemad Raza");
+		
+		System.out.println(eq1.equals(eq2));
+	}
 }
