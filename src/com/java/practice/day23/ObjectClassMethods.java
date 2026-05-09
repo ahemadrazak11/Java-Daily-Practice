@@ -19,8 +19,10 @@ public class ObjectClassMethods {
 	
 	//toString method overriding
 	
-	
-	
+	public String toString()
+	{
+		return "[ ID: " + id + " Name: " + name + "]";
+	}
 	
 	//equals method overriding
 	public boolean equals(Object o)
@@ -34,7 +36,11 @@ public class ObjectClassMethods {
 		return false;
 	}
 	
-	//hashCode method overriding
+//	//hashCode method overriding
+//	public int hashCode()
+//	{
+//		return id + (int)Integer.parseInt(name);
+//	}
 	
 
 	public static void main(String[] args)
@@ -44,5 +50,10 @@ public class ObjectClassMethods {
 		ObjectClassMethods Obj2 =new ObjectClassMethods(102, "Ahemad");
 		
 		System.out.println(Obj2.equals(Obj1)); // false
+		
+		System.out.println(Obj1.toString()); // [ ID: 101 Name: Ahemad]
+		System.out.println(Obj2.toString()); // [ ID: 102 Name: Ahemad]
+		
+		
 	}
 }
