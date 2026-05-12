@@ -36,11 +36,11 @@ public class ObjectClassMethods {
 		return false;
 	}
 	
-//	//hashCode method overriding
-//	public int hashCode()
-//	{
-//		return id + (int)Integer.parseInt(name);
-//	}
+	//hashCode method overriding
+	public int hashCode()
+	{
+		return id + name.hashCode();
+	}
 	
 
 	public static void main(String[] args)
@@ -54,6 +54,10 @@ public class ObjectClassMethods {
 		System.out.println(Obj1.toString()); // [ ID: 101 Name: Ahemad]
 		System.out.println(Obj2.toString()); // [ ID: 102 Name: Ahemad]
 		
+		System.out.println(Obj1.hashCode());// Integer Value based on the properties of object
+		System.out.println(Obj2.hashCode());// Integer Value based on the properties of object
+		
+		System.out.println(Obj1.hashCode() == Obj2.hashCode()); // false
 		
 	}
 }
