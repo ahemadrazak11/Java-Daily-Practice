@@ -26,6 +26,11 @@ public class StringClass {
 		System.out.println(str7);
 		
 		
+		System.out.println("Before Concat: " + str4);		
+		str4.concat(" Raza"); // Concatination happened in string constant pool area but actual string not change until re-initialize.		
+		System.out.println("After Concat: " + str4);
+		str4 = str4.concat(" Raza");
+		System.out.println("Concatination and re-initailization: ==> " + str4);
 		
 	}
 	
