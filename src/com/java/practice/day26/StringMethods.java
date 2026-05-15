@@ -34,6 +34,6 @@ public class StringMethods {
 		System.out.println(str1.equalsIgnoreCase(str4)); // true ==> because it ignor the casing.
 		
 		// Searching
-		
 	}
 }
+
