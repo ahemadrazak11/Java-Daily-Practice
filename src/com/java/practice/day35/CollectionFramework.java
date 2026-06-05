@@ -1,6 +1,6 @@
 package com.java.practice.day35;
 
-public class CollectionFramework {
+class Collection {
 
 	public static void main(String[] args) {
 		
@@ -8,6 +8,7 @@ public class CollectionFramework {
 		
 		Integer i = 10;
 		
-		System.out.println(i.equals(a));	
+		System.out.println(i.equals(a));
+			
 	}
 }
