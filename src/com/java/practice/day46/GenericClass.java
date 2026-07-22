@@ -1,3 +1,5 @@
+package com.java.practice.day46;
+
 class GenericClass{
 
     public static void main(String[] args){
