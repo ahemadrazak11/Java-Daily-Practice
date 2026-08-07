@@ -29,11 +29,7 @@ public class SetAndMap {
 		
 		
 		
-		Map<Boolean, String> booleanMap = new HashMap<>();
-		booleanMap.put(true, "True Value");
-		booleanMap.put(false, "False Value");
 		
-		System.out.println(booleanMap);
 		
 		
 		
