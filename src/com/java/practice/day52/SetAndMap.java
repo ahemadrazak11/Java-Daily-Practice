@@ -16,7 +16,6 @@ public class SetAndMap {
 		str.add("B");
 		str.add("Z");
 		str.add("ZZ");
-		
 		for(String s : str) {
 			System.out.println(s);
 		}
@@ -24,11 +23,20 @@ public class SetAndMap {
 		
 		
 		Map<Integer, String> i = new HashMap<>();
-		
 		i.put(1, "Ahemad");
 		i.put(2, "Raza");
-		
 		System.out.println(i);
+		
+		
+		
+		Map<Boolean, String> booleanMap = new HashMap<>();
+		booleanMap.put(true, "True Value");
+		booleanMap.put(false, "False Value");
+		
+		System.out.println(booleanMap);
+		
+		
+		
 		
 }
 	
