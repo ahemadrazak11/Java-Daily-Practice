@@ -22,6 +22,18 @@ public class SetMethods {
 		
 		System.out.println("the size of Set is: " + str.size());
 		
+		System.out.println("is empty of not: " + str.isEmpty());
+		
+		System.out.println("str contains A or not: " + str.contains("A"));
+		
+		System.out.println("str contains Z or not: " +  str.contains("Z"));
+		
+		Iterator<String> it = str.iterator();
+		
+		while(it.hasNext()) {
+			System.out.println(it.next());
+		}
+		
 	}
 
 }
