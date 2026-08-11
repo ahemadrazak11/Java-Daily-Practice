@@ -16,6 +16,11 @@ public class MapMethods {
 			hashMap.put(102, "B");
 			hashMap.put(103, "C");
 			
+			System.out.println(hashMap.entrySet());
+			 System.out.println(hashMap.replace(101, null));
 			 System.out.println(hashMap.entrySet());
+			 
+			 
+			 System.out.println(hashMap.containsValue(null));
 		}
 }
