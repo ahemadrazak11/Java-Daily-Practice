@@ -15,6 +15,8 @@ public class SetMethods {
 		str.add("C");
 		str.add("D");
 		str.add("E");
+		str.add("Ahemad");
+		str.add("Raza");
 		
 		System.out.println(str); 
 		// this line print the all values present in side the set 
@@ -28,11 +30,31 @@ public class SetMethods {
 		
 		System.out.println("str contains Z or not: " +  str.contains("Z"));
 		
+		
+		System.out.println("=============== the iteration through the for each loop ==================");
+		
+		for(String s : str) {
+			System.out.println(s);
+		}
+		
+		System.out.println("=================================");
+		
+		System.out.println("=============== the iteration through the iterator() method ==================");
+		
 		Iterator<String> it = str.iterator();
 		
 		while(it.hasNext()) {
 			System.out.println(it.next());
 		}
+		
+		System.out.println("=================================");
+		
+		// In Set only one null value allowed because interanlly it use the Map.
+		// Map is stored the data in key value paire. In Map for Set the Key consider as a Set value and it should be unique.
+		// when we try to add multiple null values it get replace with existing null values that's why not getting errror.
+		str.add(null); 
+		str.add(null);
+		
 		
 	}
 
