@@ -6,20 +6,35 @@ public class QueueInterface {
 	
 	public static void main(String[] args) {
 		
-		Queue<Integer> q = new ArrayDeque<>(5);
+		Queue<Integer> q = new ArrayDeque<>();
 		
-		q.add(100);
-		q.add(20);
-		q.add(30);
-		q.add(40);
-		q.add(50);
-		q.add(60);
+		q.offer(10);
+		q.offer(20);
+		q.offer(30);
+		q.offer(40);
 		
 		
+		System.out.println(q);
 		
-		System.out.println(q.add(70));
 		System.out.println(q.peek());
+		
 		System.out.println(q.poll());
+		System.out.println(q.poll());
+		
+		System.out.println(q);
 	}
 
 }
+
+/*
+output:
+
+[10, 20, 30, 40]
+10
+10
+20
+[30, 40]
+
+*/
+	
+	

@@ -14,11 +14,18 @@ public class PriorityQueueClass {
 		pq.offer(30);
 		pq.offer(40);
 		
-		System.out.println(pq.poll());
-		System.out.println(pq.poll());
-		System.out.println(pq.poll());
-		System.out.println(pq.poll());
-		System.out.println(pq.poll());
+//		System.out.println(pq.poll());
+//		System.out.println(pq.poll());
+//		System.out.println(pq.poll());
+//		System.out.println(pq.poll());
+		
+//		for(Integer e : pq) {
+//			System.out.println(e);
+//		}
+		
+		while(!pq.isEmpty()) {
+			System.out.println(pq.poll());
+		}
 	}
 
 }
