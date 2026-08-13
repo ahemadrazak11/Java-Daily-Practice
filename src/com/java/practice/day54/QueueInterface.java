@@ -6,7 +6,7 @@ public class QueueInterface {
 	
 	public static void main(String[] args) {
 		
-		Queue<Integer> q = new ArrayDeque<>();
+		Queue<Integer> q = new ArrayDequeStack<>();
 		
 		q.offer(10);
 		q.offer(20);
