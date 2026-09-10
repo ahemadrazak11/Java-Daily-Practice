@@ -9,7 +9,7 @@ public class PreDefineFunctionalInterface {
 	
 	public static void main(String[] args) {
 		
-		Function<Integer, Integer> getSquare = x -> x * x; // this lambda expression is the override of apply method which is present in the Function Interface.
+		Function<Integer, Integer> getSquare = x -> x * x; // this lambda expression is the override of apply() method which is present in the Function Interface.
 		
 //		System.out.println(getSquare.apply(5));
 //		System.out.println(getSquare.apply(6));
@@ -41,7 +41,15 @@ public class PreDefineFunctionalInterface {
 		
 		Consumer<Integer>  j = x -> System.out.println(x);
 		
+		
+		//list.forEach(x -> System.out.println(x));
 		list.forEach(j); // the forEach() take the Consumer Interface as an Argument we can pass lambda expression for that or pass the refrence variable.
+		
+		
+		// Function<T, R>,  it takes input and give output it has apply() method
+		//Consumer<T>, it only takes input but not return any output like T -> void and it has accept() method
+		//Supplier<T>, it does not take input but gives output like void -> T and it has get()
+		//Predicate<T> it takes input and perform test and return boolean value like T -> boolean and it has test() method.
 	} 
 
 }
