@@ -3,66 +3,110 @@ package com.java.practice.day56;
 import java.util.*;
 
 import java.util.function.Function;
+import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 public class MethodReference {
 	
-	
-	public static int sqaure(int x) {
+
+	public static int getSqaure(int x) {
 		
 		return x * x;
 	}
 	
+	
+	public void greeting(String name) {
+		
+		System.out.println("Hello " + name);
+	}
+		
+	
 	public static void main(String[] args) {
 		
 		
-		//1. Reference to a Static Method
+		// Method Reference To Static Method.
+		
+		
+		//Lambda Expression
+		Function<Integer, Integer> f1 = x -> MethodReference.getSqaure(x);
+		System.out.println(f1.apply(5));
+		
+		//Method Reference
+		Function<Integer, Integer> f2 = MethodReference::getSqaure;
+		System.out.println(f2.apply(3));
+		
+		
+		
+		// Method Reference To Non-Static Method.
+		
+		// first we have to create the object of a particular class the we can access there instance method.
+		
+		MethodReference d = new MethodReference();
+		
+		// the work is taking argument and returning nothing like Argument -> void then use Consumer Interface.
 		
 		
 		// Lambda Expression
-		Function<Integer, Integer> f1 = x -> MethodReference.sqaure(x);
+		Consumer<String> c1 = x -> d.greeting(x);
 		
-		System.out.println("Square By Lambda Expression = " + f1.apply(5));
+		c1.accept("Ahemad");
 		
-		// Method Reference
+		// Method Reference.
+		Consumer<String> c2 = d::greeting;
 		
-		Function<Integer, Integer> f2 = MethodReference::sqaure;
-		
-		System.out.println("Sqaure by Method Reference = " + f2.apply(10));
-		
+		c2.accept("Raza");
 		
 		
 		
 		
+		// Method reference to instance method of an arbitarary object.
+		
+		Function<String, String> f3 = x -> x.toUpperCase();
+		
+		System.out.println(f3.apply("abcd"));
+		
+		
+		Function<String, String> f4 = String::toUpperCase; // here we tell the the compiler to use this method not call here it will call when needed.
+		
+		System.out.println(f4.apply("raza khan")); // actually here we call this method.
 		
 		
 		
+		// Method Reference to Constructor.
+		
+		// Here We have to use Spplier Interface to create an object because the Supplier take nothing as an argument and return somthing.
 		
 		
+		// lambda Expression for Zero argument constructor.
+		Supplier<Car> getCar = () -> new Car();
+		// lambda Expression for parameterized argument constructor.
 		
 		
+		// it takes String and return Car type of Object
+		Function<String, Car> getCar1 = (x) -> new Car(x);
+		
+		getCar.get();
+		
+		getCar1.apply("BMW");
 		
 		
-		
-		/*
-		 List<Integer> list = new ArrayList<>(List.of(10,50,30,90,40,60,70,20,80));
-		
-		Collections.sort(list, (l1, l2)-> l1 - l2); // the sort method accept list and one is Comaprator ka object.
-		
-//		for(Integer l : list) {
-//			
-//			System.out.println(l);
-//			
-//		}
-		
-//		list.forEach(x -> System.out.println(x));
-		
-		list.forEach(System.out::println);
-		
-		
-		*/
 		
 		
 	}
-
 }
 
+
+class Car{
+	
+	
+	// Zero Argumetn Constructor.
+	public Car(){	
+		System.out.println("Car Object is Created.");
+	}
+	
+	
+	// Parameterized Constructor.
+	public Car(String carName) {
+		System.out.println(carName + "Object is Created.");
+	}
+}
