@@ -66,6 +66,15 @@ public class StreamAPI {
 												.toList();
 		
 		uniqueList.forEach(System.out::println);
+		
+		System.out.println("======================= InfiniteStream ====================================");
+		
+		Stream<Integer> infinteStream = Stream.iterate(1, x -> x + 1)
+											  .limit(100)
+											  .filter(x -> x % 2 == 0)
+											  .map(x -> x*x);
+		
+		infinteStream.forEach(System.out::println);
 	}
 
 }
