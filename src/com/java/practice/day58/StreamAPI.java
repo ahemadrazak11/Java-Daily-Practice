@@ -55,6 +55,17 @@ public class StreamAPI {
 		System.out.println("=======================	Sorted List By Stream ==================");
 		
 					sortedList.forEach(System.out::println);
+				
+		System.out.println("=======================	Dublicates removed List By Stream ==================");
+					
+		List<Integer> duplicateList = new ArrayList<>(List.of(1,1,2,3,4,5,5,4,10,11,22,20,19,13,14,11,10,18,6,7,8,9));
+		
+		List<Integer> uniqueList = duplicateList.stream()
+												.distinct()
+												.sorted()
+												.toList();
+		
+		uniqueList.forEach(System.out::println);
 	}
 
 }

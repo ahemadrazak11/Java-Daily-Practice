@@ -31,13 +31,6 @@ public class IntroductionToStream {
 				 						.map(x -> x * 3);
 				 						
 				 		s.forEach(System.out::println);
-		
-		  //3 Array
-				 		
-		 String[] str = {"A"
-				 		
-				 		
-		
 	}
 	
 	
