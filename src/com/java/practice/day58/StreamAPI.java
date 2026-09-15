@@ -2,6 +2,7 @@ package com.java.practice.day58;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Stream;
 
 public class StreamAPI {
@@ -83,6 +84,17 @@ public class StreamAPI {
 			  .limit(10)
 			  .toList()
 			  .forEach(System.out::println);
+			   
+			   
+			Optional<Integer> maxVal =   list.stream()
+			   	   .max((x, y) -> x - y);
+			
+			for(Integer l : list) {
+				
+				System.out.print(l + " ");
+			}
+			System.out.println();
+			System.out.println("Max Element = " + maxVal);
 		
 	}
 	
