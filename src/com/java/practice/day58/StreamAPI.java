@@ -67,7 +67,7 @@ public class StreamAPI {
 		
 		uniqueList.forEach(System.out::println);
 		
-		System.out.println("======================= InfiniteStream ====================================");
+		System.out.println("======================= InfiniteStream by iterate(seed, nextFunction) ====================================");
 		
 		Stream<Integer> infinteStream = Stream.iterate(1, x -> x + 1)
 											  .limit(100)
@@ -75,6 +75,16 @@ public class StreamAPI {
 											  .map(x -> x*x);
 		
 		infinteStream.forEach(System.out::println);
+		
+		
+		System.out.println("======================= InfiniteStream by generate(SupplierInterface)====================================");
+		
+			   Stream.generate(Math::random)
+			  .limit(10)
+			  .toList()
+			  .forEach(System.out::println);
+		
 	}
+	
 
 }
